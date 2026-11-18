@@ -1,0 +1,153 @@
+
+/* PHASE 6: WHY CHOOSE QSPIDERS */
+
+.why-choose-section {
+    padding: 85px 0;
+    background: #f8f9fc;
+    overflow: hidden;
+}
+
+.why-choose-heading {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 55px;
+}
+
+.section-subtitle {
+    color: #f47721;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.why-choose-heading h2 {
+    font-size: 36px;
+    font-weight: 800;
+    color: #20232b;
+    margin: 12px 0;
+}
+
+.why-choose-heading h2 span {
+    color: #f47721;
+}
+
+.why-choose-heading p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.why-choose-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.placement-info h3 {
+    font-size: 29px;
+    font-weight: 800;
+    color: #252832;
+    margin-bottom: 18px;
+}
+
+.placement-info > p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 520px;
+}
+
+.placement-stats {
+    display: flex;
+    gap: 45px;
+    margin: 35px 0;
+}
+
+.stat-box h2 {
+    color: #f47721;
+    font-size: 34px;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.stat-box p {
+    color: #555;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.placement-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 25px;
+    background: #f47721;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.placement-btn:hover {
+    background: #d95e0e;
+    color: white;
+    transform: translateY(-3px);
+}
+
+.placement-image {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.placement-image img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    display: block;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .why-choose-section {
+        padding: 60px 0;
+    }
+
+    .why-choose-heading h2 {
+        font-size: 29px;
+    }
+
+    .why-choose-content {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .placement-info h3 {
+        font-size: 25px;
+    }
+
+    .placement-stats {
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+
+    .stat-box h2 {
+        font-size: 28px;
+    }
+
+    .placement-image img {
+        height: 260px;
+    }
+}
+
+@media (max-width: 400px) {
+    .placement-stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+}

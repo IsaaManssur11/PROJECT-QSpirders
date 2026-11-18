@@ -1,0 +1,389 @@
+
+/* ===================================
+   HERO SECTION
+=================================== */
+
+.hero-section {
+    width: 100%;
+    min-height: 740px;
+    position: relative;
+    overflow: hidden;
+
+    background-image: url("../assets/images/hero-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: #ffffff;
+}
+
+/* DARK IMAGE OVERLAY */
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.82) 0%,
+        rgba(0, 0, 0, 0.65) 48%,
+        rgba(0, 0, 0, 0.25) 100%
+    );
+
+    z-index: 1;
+}
+
+.hero-container {
+    position: relative;
+    z-index: 2;
+    padding: 125px 6% 30px;
+}
+
+/* HERO CONTENT */
+
+.hero-content {
+    min-height: 450px;
+}
+
+/* LEFT TEXT */
+
+.hero-text {
+    padding-left: 0;
+}
+
+.hero-text h1 {
+    font-size: clamp(42px, 4vw, 68px);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+.hero-text h1 span {
+    display: block;
+
+    background: linear-gradient(
+        90deg,
+        #ff9419,
+        #ff5429
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-text p {
+    max-width: 870px;
+    font-size: 23px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #f4f4f4;
+    margin-bottom: 20px;
+}
+
+/* BOOK DEMO BUTTON */
+
+.demo-btn {
+    background: linear-gradient(
+        110deg,
+        #ff9419,
+        #ff5429
+    );
+
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+
+    padding: 15px 38px;
+    font-size: 21px;
+    font-weight: 500;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.demo-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 18px rgba(255, 100, 30, 0.35);
+}
+
+/* LOCATION TITLE */
+
+.hero-location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.location-title {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.location-title h2 {
+    font-size: clamp(36px, 5vw, 90px);
+    font-weight: 800;
+    color: #ffffff;
+    white-space: nowrap;
+    margin: 0;
+}
+
+.location-pin {
+    color: #ff6c29;
+    font-size: 85px;
+}
+
+.location-divider {
+    width: 8px;
+    height: 115px;
+    background: #c52e36;
+}
+
+/* ===================================
+   HIRING PARTNERS
+=================================== */
+
+.hiring-partners {
+    width: 100%;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.hiring-partners h2 {
+    font-size: 37px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 25px;
+}
+
+.partner-slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+.partner-track {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: max-content;
+    gap: 85px;
+
+    animation: partnerMove 28s linear infinite;
+}
+
+.partner-track span {
+    color: #d83238;
+    font-size: 25px;
+    font-weight: 800;
+    font-style: italic;
+    white-space: nowrap;
+}
+
+.partner-slider:hover .partner-track {
+    animation-play-state: paused;
+}
+
+@keyframes partnerMove {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* ===================================
+   DEMO MODAL
+=================================== */
+
+#demoModal .modal-content {
+    border-radius: 12px;
+    border: none;
+}
+
+#demoModal .modal-title {
+    font-weight: 800;
+}
+
+.demo-submit {
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #ff9419, #ff5429);
+}
+
+#demoMessage {
+    font-weight: 600;
+    text-align: center;
+}
+
+/* ===================================
+   MOBILE RESPONSIVE
+=================================== */
+
+@media (max-width: 991px) {
+
+    .hero-section {
+        min-height: auto;
+    }
+
+    .hero-container {
+        padding: 70px 25px 30px;
+    }
+
+    .hero-content {
+        min-height: auto;
+        text-align: center;
+    }
+
+    .hero-text p {
+        font-size: 18px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-location {
+        margin-top: 55px;
+    }
+
+    .location-title {
+        gap: 12px;
+    }
+
+    .location-title h2 {
+        font-size: 40px;
+    }
+
+    .location-pin {
+        font-size: 45px;
+    }
+
+    .location-divider {
+        height: 60px;
+    }
+
+    .hiring-partners {
+        margin-top: 70px;
+    }
+
+    .hiring-partners h2 {
+        font-size: 27px;
+    }
+
+    .partner-track {
+        gap: 45px;
+    }
+
+    .partner-track span {
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .hero-container {
+        padding: 55px 18px 30px;
+    }
+
+    .hero-text h1 {
+        font-size: 39px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+
+    .demo-btn {
+        font-size: 17px;
+        padding: 12px 28px;
+    }
+
+    .location-title h2 {
+        font-size: 29px;
+    }
+
+    .location-pin {
+        font-size: 35px;
+    }
+
+    .location-divider {
+        height: 45px;
+        width: 5px;
+    }
+
+    .hiring-partners h2 {
+        font-size: 23px;
+    }
+
+}
+
+
+/* FLOATING CONTACT BUTTONS */
+
+.floating-contact {
+    position: fixed;
+    right: 20px;
+    bottom: 18px;
+    z-index: 1050;
+
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.callback-btn,
+.whatsapp-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 12px 19px;
+    border: none;
+    border-radius: 8px;
+
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+.callback-btn {
+    background: #387ff0;
+}
+
+.whatsapp-btn {
+    background: #16c45a;
+}
+
+.callback-btn:hover,
+.whatsapp-btn:hover {
+    color: white;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 576px) {
+
+    .floating-contact {
+        right: 10px;
+        bottom: 10px;
+        gap: 7px;
+    }
+
+    .callback-btn,
+    .whatsapp-btn {
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+
+}
