@@ -155,6 +155,32 @@
     transform: translateY(-4px);
 }
 
+/* Photo credits: Keep source and license details available without crowding the cards. */
+.branch-photo-credits {
+    max-width: 1575px;
+    margin: 12px auto 0;
+    color: #737373;
+    font-size: 12px;
+}
+
+.branch-photo-credits summary {
+    width: fit-content;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.branch-photo-credits ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px 24px;
+    margin: 12px 0 0;
+    padding-left: 20px;
+}
+
+.branch-photo-credits a {
+    color: inherit;
+}
+
 /* ======================================
    TABLET RESPONSIVENESS
 ====================================== */
@@ -213,6 +239,10 @@
     .view-city-card {
         min-height: 120px;
         font-size: 17px;
+    }
+
+    .branch-photo-credits ul {
+        grid-template-columns: 1fr;
     }
 
 }

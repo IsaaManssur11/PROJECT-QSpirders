@@ -4,33 +4,6 @@
     background: #f7f8fa;
 }
 
-.contact-logo {
-    gap: 0;
-    color: #242424;
-    font-size: 20px;
-    font-weight: 600;
-    text-decoration: none;
-}
-
-.contact-logo-mark {
-    width: 43px;
-    height: 43px;
-    display: inline-grid;
-    place-items: center;
-    margin-right: -3px;
-    color: #242424;
-    border: 7px solid #f29840;
-    border-right-color: transparent;
-    border-radius: 50%;
-    font-size: 15px;
-    font-weight: 500;
-}
-
-.contact-logo-word {
-    position: relative;
-    z-index: 1;
-}
-
 .contact-hero {
     position: relative;
     overflow: hidden;

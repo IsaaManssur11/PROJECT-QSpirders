@@ -101,6 +101,29 @@
     display: flex;
     align-items: center;
     flex-shrink: 0;
+    color: #fff;
+    font-size: 21px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.logo-mark {
+    width: 48px;
+    height: 48px;
+    display: inline-grid;
+    place-items: center;
+    margin-right: -4px;
+    color: #fff;
+    border: 6px solid #ff8b16;
+    border-right-color: transparent;
+    border-radius: 50%;
+    font-size: 17px;
+    line-height: 1;
+}
+
+.logo-word {
+    position: relative;
+    z-index: 1;
 }
 
 .logo img {

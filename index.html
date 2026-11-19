@@ -86,10 +86,10 @@
 
         <div class="nav-inner">
 
-            <!-- Original logo asset -->
-            <a href="index.html" class="logo">
-                <img src="assets/images/qspiders-logo.png"
-                     alt="QSpiders Logo">
+            <!-- Text wordmark keeps the brand visible without an external image asset. -->
+            <a href="index.html" class="logo" aria-label="QSpiders home">
+                <span class="logo-mark" aria-hidden="true">Q</span>
+                <span class="logo-word">Spiders</span>
             </a>
 
             <!-- Navigation -->
@@ -192,7 +192,19 @@
 
 <section class="hero-section">
 
+    <video class="hero-video" autoplay muted loop playsinline
+           preload="metadata" poster="assets/images/hero-workplace-poster.jpg"
+           aria-hidden="true" tabindex="-1">
+        <source src="assets/videos/illustrative-workplace.mp4"
+                type="video/mp4">
+    </video>
+
     <div class="hero-overlay"></div>
+
+    <a class="hero-video-credit"
+       href="https://www.pexels.com/video/men-and-women-busy-working-on-their-computers-3251737/"
+       target="_blank" rel="noopener noreferrer">
+    </a>
 
     <div class="container-fluid hero-container">
 
@@ -734,7 +746,7 @@
 
             <div class="branch-card">
                 <img src="assets/images/cities/bengaluru.jpg"
-                     alt="Bengaluru">
+                     alt="Bengaluru skyline">
                 <div class="branch-overlay">
                     <h3>Bengaluru</h3>
                     <p>Branches</p>
@@ -746,7 +758,7 @@
 
             <div class="branch-card">
                 <img src="assets/images/cities/hyderabad.jpg"
-                     alt="Hyderabad">
+                     alt="Hyderabad skyline">
                 <div class="branch-overlay">
                     <h3>Hyderabad</h3>
                     <p>Branches</p>
@@ -758,7 +770,7 @@
 
             <div class="branch-card">
                 <img src="assets/images/cities/chennai.jpg"
-                     alt="Chennai">
+                     alt="Chennai skyline viewed from St. Thomas Mount">
                 <div class="branch-overlay">
                     <h3>Chennai</h3>
                     <p>Branches</p>
@@ -770,7 +782,7 @@
 
             <div class="branch-card">
                 <img src="assets/images/cities/pune.jpg"
-                     alt="Pune">
+                     alt="Pune skyline">
                 <div class="branch-overlay">
                     <h3>Pune</h3>
                     <p>Branches</p>
@@ -782,7 +794,7 @@
 
             <div class="branch-card">
                 <img src="assets/images/cities/mumbai.jpg"
-                     alt="Mumbai">
+                     alt="Mumbai skyline at night">
                 <div class="branch-overlay">
                     <h3>Mumbai</h3>
                     <p>Branches</p>
@@ -794,7 +806,7 @@
 
             <div class="branch-card">
                 <img src="assets/images/cities/noida.jpg"
-                     alt="Noida">
+                     alt="Greater Noida West skyline at night">
                 <div class="branch-overlay">
                     <h3>Noida</h3>
                     <p>Branches</p>
@@ -806,7 +818,7 @@
 
             <div class="branch-card">
                 <img src="assets/images/cities/mysore.jpg"
-                     alt="Mysore">
+                     alt="Mysore Palace">
                 <div class="branch-overlay">
                     <h3>Mysore</h3>
                     <p>Branches</p>
@@ -818,7 +830,7 @@
 
             <div class="branch-card">
                 <img src="assets/images/cities/gurugram.jpg"
-                     alt="Gurugram">
+                     alt="Cyber City and Rapid Metro in Gurugram">
                 <div class="branch-overlay">
                     <h3>Gurugram</h3>
                     <p>Branches</p>
@@ -830,7 +842,7 @@
 
             <div class="branch-card">
                 <img src="assets/images/cities/bhubaneswar.jpg"
-                     alt="Bhubaneswar">
+                     alt="Ananta Vasudeva Temple in Bhubaneswar">
                 <div class="branch-overlay">
                     <h3>Bhubaneswar</h3>
                     <p>Branches</p>
@@ -842,7 +854,7 @@
 
             <div class="branch-card">
                 <img src="assets/images/cities/kolkata.jpg"
-                     alt="Kolkata">
+                     alt="Kolkata skyline viewed from Howrah Bridge">
                 <div class="branch-overlay">
                     <h3>Kolkata</h3>
                     <p>Branches</p>
@@ -854,7 +866,7 @@
 
             <div class="branch-card">
                 <img src="assets/images/cities/ahmedabad.jpg"
-                     alt="Ahmedabad">
+                     alt="Ahmedabad skyline">
                 <div class="branch-overlay">
                     <h3>Ahmedabad</h3>
                     <p>Branches</p>
@@ -866,7 +878,7 @@
 
             <div class="branch-card">
                 <img src="assets/images/cities/kochi.jpg"
-                     alt="Kochi">
+                     alt="Kochi skyline">
                 <div class="branch-overlay">
                     <h3>Kochi</h3>
                     <p>Branches</p>
@@ -878,7 +890,7 @@
 
             <div class="branch-card">
                 <img src="assets/images/cities/coimbatore.jpg"
-                     alt="Coimbatore">
+                     alt="Coimbatore skyline">
                 <div class="branch-overlay">
                     <h3>Coimbatore</h3>
                     <p>Branches</p>
@@ -890,7 +902,7 @@
 
             <div class="branch-card">
                 <img src="assets/images/cities/davangere.jpg"
-                     alt="Davangere">
+                     alt="Davangere city">
                 <div class="branch-overlay">
                     <h3>Davangere</h3>
                     <p>Branches</p>
@@ -911,6 +923,26 @@
 
 
         </div>
+
+        <details class="branch-photo-credits">
+            <summary>Photo credits</summary>
+            <ul>
+                <li><a href="https://commons.wikimedia.org/wiki/File:South_Bengaluru_Skyline_as_seen_from_ISKCON,_Banashankari.jpg" target="_blank" rel="noopener noreferrer">Bengaluru — Raghavan2010</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a></li>
+                <li><a href="https://commons.wikimedia.org/wiki/File:Hyderabad_panorama.jpg" target="_blank" rel="noopener noreferrer">Hyderabad — Ranadheer Purupati</a>, Public domain</li>
+                <li><a href="https://commons.wikimedia.org/wiki/File:Chennai_from_St._Thomas_Mount.jpg" target="_blank" rel="noopener noreferrer">Chennai — L.vivian.richard</a>, Public domain</li>
+                <li><a href="https://commons.wikimedia.org/wiki/File:Skyline_of_Pune_city_as_seen_from_The_Westin_Koregaon_Park.jpg" target="_blank" rel="noopener noreferrer">Pune — Randy Breese</a>, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener noreferrer">CC BY 2.0</a></li>
+                <li><a href="https://commons.wikimedia.org/wiki/File:Mumbai,_India,_Bombay,_Mumbai_city_skyline_at_night.jpg" target="_blank" rel="noopener noreferrer">Mumbai — Vyacheslav Argenberg</a>, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a></li>
+                <li><a href="https://commons.wikimedia.org/wiki/File:Night_Skyline_of_Greater_Noida_West.jpg" target="_blank" rel="noopener noreferrer">Noida — SeekeroftheCosmos</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener noreferrer">CC0</a></li>
+                <li><a href="https://commons.wikimedia.org/wiki/File:Mysore_palace,_karnataka.jpg" target="_blank" rel="noopener noreferrer">Mysore — Nandanjayant</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a></li>
+                <li><a href="https://commons.wikimedia.org/wiki/File:DLF_Cyber_City_with_Rapid_Metro,_Gurgaon.jpg" target="_blank" rel="noopener noreferrer">Gurugram — Slyronit</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a></li>
+                <li><a href="https://commons.wikimedia.org/wiki/File:Ananta_Basudeba_Temple,_Bhubaneswar_01.jpg" target="_blank" rel="noopener noreferrer">Bhubaneswar — Prateek Pattanaik</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a></li>
+                <li><a href="https://commons.wikimedia.org/wiki/File:Kolkata_skyline_viewed_from_Howrah_Bridge.jpg" target="_blank" rel="noopener noreferrer">Kolkata — Syed098</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener noreferrer">CC0</a></li>
+                <li><a href="https://commons.wikimedia.org/wiki/File:Ahmedabad_Inner_Ring_Road_Skyline.jpg" target="_blank" rel="noopener noreferrer">Ahmedabad — Kushagra140</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a></li>
+                <li><a href="https://commons.wikimedia.org/wiki/File:Kochi_Skyline.jpg" target="_blank" rel="noopener noreferrer">Kochi — Fsquares (The Ibrahims)</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a></li>
+                <li><a href="https://commons.wikimedia.org/wiki/File:Coimbatore_Skyline_from_G.D.Naidu_Flyover.jpg" target="_blank" rel="noopener noreferrer">Coimbatore — Lone wanderer siya</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a></li>
+                <li><a href="https://commons.wikimedia.org/wiki/File:Davangere_City.jpg" target="_blank" rel="noopener noreferrer">Davangere — Nvikram07</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a></li>
+            </ul>
+        </details>
 
     </div>
 
@@ -1083,8 +1115,8 @@
             <!-- Right Side: Image -->
             <div class="placement-image">
                 <img
-                    src="assets/images/placement-assistance.jpg"
-                    alt="QSpiders placement assistance"
+                    src="assets/images/placement-assistance-cutout.png"
+                    alt="Placement assistance representative giving a thumbs-up"
                 >
             </div>
 
@@ -1104,7 +1136,7 @@
 
             <div class="faculty-image">
                 <img
-                    src="assets/images/experienced-faculty.jpg"
+                    src="assets/images/experienced-faculty-cutout.png"
                     alt="Experienced software training faculty"
                 >
             </div>
