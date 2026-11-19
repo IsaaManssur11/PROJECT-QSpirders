@@ -1,0 +1,135 @@
+
+/* Shared presentation effects: scroll reveals, hover motion, and reduced-motion support. */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Scroll reveal initial state */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(45px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s cubic-bezier(.2,.65,.3,1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Reveal from sides */
+
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: 0.8s ease;
+}
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: 0.8s ease;
+}
+
+.reveal-left.active,
+.reveal-right.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* =================================
+   COURSE CARD HOVER
+================================= */
+
+.course-card {
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.13);
+}
+
+.course-card img {
+    transition: transform 0.5s ease;
+}
+
+.course-card:hover img {
+    transform: scale(1.07);
+}
+
+/* =================================
+   BRANCH CARD HOVER
+================================= */
+
+.city-card {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.city-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.2);
+}
+
+.city-card img {
+    transition: transform 0.6s ease;
+}
+
+.city-card:hover img {
+    transform: scale(1.1);
+}
+
+/* =================================
+   BUTTON HOVER
+================================= */
+
+button,
+.placement-btn,
+.faculty-btn {
+    transition: all 0.3s ease;
+}
+
+button:hover,
+.placement-btn:hover,
+.faculty-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* =================================
+   TRAINING MODE CARDS
+================================= */
+
+.mode-card {
+    transition: all 0.35s ease;
+}
+
+.mode-card:hover {
+    transform: translateY(-9px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+/* =================================
+   REDUCE MOTION ACCESSIBILITY
+================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .reveal,
+    .reveal-left,
+    .reveal-right {
+        opacity: 1;
+        transform: none;
+    }
+}

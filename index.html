@@ -32,12 +32,14 @@
     <link rel="stylesheet" href="css/why-choose.css">
     <link rel="stylesheet" href="css/faculty.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/animations.css">
+
 </head>
 
 <body>
 
 
-<!-- =============== HEADER START =============== -->
+<!-- Header: Contact links and navigation menus; presentation is in css/header.css and menu behavior is in js/script.js. -->
 
 <header class="main-header">
 
@@ -91,30 +93,94 @@
             </a>
 
             <!-- Navigation -->
-            <ul class="nav-menu">
+            <ul class="nav-menu" id="navMenu">
 
-                <li><a href="#courses">All Courses</a></li>
-
-                <li class="active">
-                    <a href="#offline-centers">Offline Centers</a>
+                <li>
+                    <a class="nav-link" href="#courses" data-mega-menu="courses"
+                       aria-haspopup="true" aria-expanded="false">All Courses</a>
                 </li>
 
-                <li><a href="#online-courses">Online Courses</a></li>
+                <li class="active">
+                    <a class="nav-link active" href="#branches" data-mega-menu="centers"
+                       aria-haspopup="true" aria-expanded="false">Offline Centers</a>
+                </li>
 
-                <li><a href="#study-abroad">Study Abroad</a></li>
+                <li><a class="nav-link" href="#online-courses">Online Courses</a></li>
 
-                <li><a href="#corporate-training">Corporate Training</a></li>
+                <li><a class="nav-link" href="#study-abroad">Study Abroad</a></li>
 
-                <li><a href="#hire-from-us">Hire From Us</a></li>
+                <li><a class="nav-link" href="#corporate-training">Corporate Training</a></li>
 
-                <li><a href="#placements">Placements</a></li>
+                <li><a class="nav-link" href="#hire-from-us">Hire From Us</a></li>
 
-                <li><a href="#contact">Contact Us</a></li>
+                <li><a class="nav-link" href="#placements">Placements</a></li>
 
+                <li><a class="nav-link" href="contact.html">Contact Us</a></li>
+
+                <!-- JavaScript moves this arrow below the hovered or active link. -->
+                <li class="nav-indicator" aria-hidden="true"></li>
             </ul>
-
         </div>
 
+        <div class="header-mega-menu courses-mega-menu" id="coursesMegaMenu"
+             aria-label="Course categories" aria-hidden="true">
+            <ul class="mega-category-list">
+                <li><a href="#courses"><i class="bi bi-fire"></i><span>Popular Courses</span><i class="bi bi-chevron-right"></i></a></li>
+                <li><a href="#courses"><i class="bi bi-code-slash"></i><span>Software Development</span><i class="bi bi-chevron-right"></i></a></li>
+                <li><a href="#courses"><i class="bi bi-search"></i><span>Software Testing</span><i class="bi bi-chevron-right"></i></a></li>
+                <li><a href="#courses"><i class="bi bi-cpu"></i><span>Data Science &amp; Analytics</span><i class="bi bi-chevron-right"></i></a></li>
+                <li><a href="#courses"><i class="bi bi-database"></i><span>Data Engineer</span><i class="bi bi-chevron-right"></i></a></li>
+                <li><a href="#courses"><i class="bi bi-cloud"></i><span>Devops</span><i class="bi bi-chevron-right"></i></a></li>
+                <li><a href="#courses"><i class="bi bi-bank"></i><span>Banking</span><i class="bi bi-chevron-right"></i></a></li>
+                <li><a href="#courses"><i class="bi bi-robot"></i><span>AI / ML</span><i class="bi bi-chevron-right"></i></a></li>
+                <li><a href="#courses"><i class="bi bi-cloud-arrow-up"></i><span>Cloud Computing</span><i class="bi bi-chevron-right"></i></a></li>
+                <li><a href="#courses"><i class="bi bi-arrow-repeat"></i><span>Agile &amp; Scrum</span><i class="bi bi-chevron-right"></i></a></li>
+                <li><a href="#courses"><i class="bi bi-diagram-3"></i><span>Software Architecture</span><i class="bi bi-chevron-right"></i></a></li>
+            </ul>
+            <div class="mega-preview">
+                <div class="mega-icon-row" aria-hidden="true">
+                    <i class="bi bi-fire"></i><i class="bi bi-code-slash"></i>
+                    <i class="bi bi-search"></i><i class="bi bi-cpu"></i>
+                    <i class="bi bi-database"></i><i class="bi bi-cloud"></i>
+                    <i class="bi bi-bank"></i><i class="bi bi-robot"></i>
+                    <i class="bi bi-cloud-arrow-up"></i><i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-lightbulb"></i>
+                </div>
+                <p>Please select a category</p>
+            </div>
+        </div>
+
+        <div class="header-mega-menu centers-mega-menu" id="centersMegaMenu"
+             aria-label="Offline centers" aria-hidden="true">
+            <ul class="mega-city-list">
+                <li><a href="#branches"><i class="bi bi-buildings"></i><span>Bengaluru</span><i class="bi bi-chevron-right"></i></a></li>
+                <li><a href="#branches"><i class="bi bi-buildings"></i><span>Hyderabad</span><i class="bi bi-chevron-right"></i></a></li>
+                <li><a href="#branches"><i class="bi bi-buildings"></i><span>Chennai</span><i class="bi bi-chevron-right"></i></a></li>
+                <li><a href="#branches"><i class="bi bi-buildings"></i><span>Pune</span><i class="bi bi-chevron-right"></i></a></li>
+                <li><a href="#branches"><i class="bi bi-buildings"></i><span>Mumbai</span><i class="bi bi-chevron-right"></i></a></li>
+                <li><a href="#branches"><i class="bi bi-buildings"></i><span>Noida</span><i class="bi bi-chevron-right"></i></a></li>
+                <li><a href="#branches"><i class="bi bi-buildings"></i><span>Mysore</span><i class="bi bi-chevron-right"></i></a></li>
+                <li><a href="#branches"><i class="bi bi-buildings"></i><span>Gurugram</span><i class="bi bi-chevron-right"></i></a></li>
+                <li><a href="#branches"><i class="bi bi-buildings"></i><span>Bhubaneswar</span><i class="bi bi-chevron-right"></i></a></li>
+                <li><a href="#branches"><i class="bi bi-buildings"></i><span>Kolkata</span><i class="bi bi-chevron-right"></i></a></li>
+                <li><a href="#branches"><i class="bi bi-buildings"></i><span>Ahmedabad</span><i class="bi bi-chevron-right"></i></a></li>
+                <li><a href="#branches"><i class="bi bi-buildings"></i><span>Kochi</span><i class="bi bi-chevron-right"></i></a></li>
+                <li><a href="#branches"><i class="bi bi-buildings"></i><span>Coimbatore</span><i class="bi bi-chevron-right"></i></a></li>
+                <li><a href="#branches"><i class="bi bi-buildings"></i><span>Davangere</span><i class="bi bi-chevron-right"></i></a></li>
+            </ul>
+            <div class="mega-city-preview">
+                <div class="mega-city-icons" aria-hidden="true">
+                    <i class="bi bi-buildings"></i><i class="bi bi-bank"></i>
+                    <i class="bi bi-building"></i><i class="bi bi-houses"></i>
+                    <i class="bi bi-buildings"></i><i class="bi bi-building"></i>
+                    <i class="bi bi-bank"></i><i class="bi bi-houses"></i>
+                    <i class="bi bi-buildings"></i><i class="bi bi-building"></i>
+                    <i class="bi bi-bank"></i><i class="bi bi-houses"></i>
+                </div>
+                <p>Please select a city</p>
+            </div>
+            <div class="mega-city-details" aria-hidden="true"></div>
+        </div>
     </nav>
 
 </header>
@@ -122,7 +188,7 @@
 <!-- =============== HEADER END =============== -->
 
 
-<!-- ================= HERO SECTION START ================= -->
+<!-- Hero: Main introduction, featured location, and hiring-partner strip; presentation is in css/hero.css. -->
 
 <section class="hero-section">
 
@@ -209,9 +275,7 @@
 
 <!-- ================= HERO SECTION END ================= -->
 
-<!-- ======================================
-     EXPLORE OUR COURSES SECTION
-====================================== -->
+<!-- Courses: Mode choices, course categories, cards, and the course-details dialog; presentation is in css/courses.css. -->
 
 <section class="courses-section" id="courses">
 
@@ -220,21 +284,21 @@
         <!-- SECTION HEADING -->
 
         <div class="courses-heading">
-            <h2>Explore Our Courses</h2>
+            <h2 class="reveal">Explore Our Courses</h2>
 
             <!-- ONLINE / OFFLINE TOGGLE -->
 
-            <div class="course-toggle">
+            <div class="course-toggle" role="radiogroup"
+                 aria-label="Course delivery mode">
 
-                <button class="toggle-btn active"
-                        data-mode="online">
-                    Online
-                </button>
+                <input class="toggle-radio" type="radio" name="course-mode"
+                       id="courseModeOnline" value="online" data-mode="online"
+                       checked>
+                <label class="toggle-btn" for="courseModeOnline">Online</label>
 
-                <button class="toggle-btn"
-                        data-mode="offline">
-                    Offline
-                </button>
+                <input class="toggle-radio" type="radio" name="course-mode"
+                       id="courseModeOffline" value="offline" data-mode="offline">
+                <label class="toggle-btn" for="courseModeOffline">Offline</label>
 
             </div>
         </div>
@@ -482,7 +546,7 @@
 
                                     <button class="enroll-btn"
                                             data-course="Software Testing Master">
-                                        Enroll Now
+                                    Enroll Now
                                     </button>
 
                                     <button class="know-btn"
@@ -609,7 +673,7 @@
 
 </section>
 
-<!-- COURSE DETAILS MODAL -->
+<!-- Course details dialog: Holds the course title, description, and enroll action. -->
 
 <div class="modal fade" id="courseDetailsModal"
      tabindex="-1" aria-hidden="true">
@@ -648,11 +712,9 @@
 </div>
 
 
-<!-- ======================================
-     PHASE 4 - OFFLINE BRANCHES
-====================================== -->
+<!-- Offline branches: City cards and the city-directory dialog; presentation is in css/branches.css. -->
 
-<section class="branches-section" id="branches">
+<section class="branches-section reveal-left" id="branches">
 
     <div class="container-fluid">
 
@@ -854,7 +916,7 @@
 
 </section>
 
-<!-- CITY DIRECTORY MODAL -->
+<!-- City directory dialog: Shows branch information and the available-city list. -->
 
 <div class="modal fade" id="cityModal" tabindex="-1"
      aria-hidden="true">
@@ -900,11 +962,9 @@
 </div>
 
 
-<!-- ======================================
-     PHASE 5 - MODES WE TRAIN
-====================================== -->
+<!-- Training modes: Summarizes online and in-person learning; presentation is in css/modes.css. -->
 
-<section class="modes-section" id="training-modes">
+<section class="modes-section reveal-right" id="training-modes">
 
     <!-- DECORATIVE WAVE BACKGROUND -->
 
@@ -972,8 +1032,8 @@
 </section>
 
 
-<!-- PHASE 6: WHY CHOOSE QSPIDERS -->
-<section class="why-choose-section" id="why-choose">
+<!-- Why QSpiders: Placement information and animated statistics; presentation is in css/why-choose.css. -->
+<section class="why-choose-section reveal-left" id="why-choose">
 
     <div class="container">
 
@@ -1002,12 +1062,12 @@
                 <div class="placement-stats">
 
                     <div class="stat-box">
-                        <h2>4.78 Lac+</h2>
+                        <h2 class="counter" data-target="478000" data-format="lakh">0</h2>
                         <p>Students Placed</p>
                     </div>
 
                     <div class="stat-box">
-                        <h2>4,100+</h2>
+                       <h2 class="counter" data-target="4100">0</h2>
                         <p>Multinational Companies</p>
                     </div>
 
@@ -1035,8 +1095,8 @@
 </section>
 
 
-<!-- PHASE 7: EXPERIENCED FACULTY GUIDANCE -->
-<section class="faculty-section" id="faculty">
+<!-- Faculty: Trainer image, benefits, and demo link; presentation is in css/faculty.css. -->
+<section class="faculty-section reveal-right" id="faculty">
 
     <div class="container">
 
@@ -1111,7 +1171,7 @@
 
 
 
-<!-- FLOATING CONTACT BUTTONS -->
+<!-- Floating contact actions: Opens the demo dialog or links to WhatsApp; styles are in css/hero.css. -->
 
 <div class="floating-contact">
 
@@ -1135,7 +1195,7 @@
 
 </div>
 
-<!-- DEMO MODAL -->
+<!-- Demo dialog: Enquiry form fields and submission feedback; styling is shared with Bootstrap. -->
 
 <div class="modal fade" id="demoModal" tabindex="-1"
      aria-labelledby="demoModalLabel" aria-hidden="true">
@@ -1198,8 +1258,8 @@
 </div>
 
 
-<!-- PHASE 8: FOOTER -->
-<footer class="site-footer">
+<!-- Footer: About text, quick links, courses, and contact details; presentation is in css/footer.css. -->
+<footer class="site-footer reveal">
 
     <div class="container">
 

@@ -1,4 +1,6 @@
 
+/* Global baseline: reset spacing, set page typography, and define default colors. */
+
 * {
     margin: 0;
     padding: 0;
@@ -22,3 +24,4 @@ a {
 button {
     font-family: inherit;
 }
+
